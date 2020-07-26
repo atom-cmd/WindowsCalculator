@@ -4,5 +4,8 @@
     <PropertyGroup>
         <PGOBuildMode Condition="'$(PGOBuildMode)'==''">Optimizer</PGOBuildMode>
     </PropertyGroup>
+        <PropertyGroup Condition="'$(PGOBuildMode)' == 'Instrument'">
+        <WholeProgramOptimization>true</WholeProgramOptimization>
+    </PropertyGroup>
   
 </Project>
